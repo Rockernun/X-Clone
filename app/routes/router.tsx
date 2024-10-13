@@ -4,11 +4,16 @@ import Home from "../../pages/home/home";
 import Profile from "../../pages/profile/profile";
 import Login from "../../pages/login/login";
 import CreateAccount from "../../pages/create-account/create-account";
+import ProtectedRoute from "../../app/routes/protected-route";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: (
+      <ProtectedRoute>
+        <Layout />
+      </ProtectedRoute>
+    ),
     children: [
       {
         path: "",
