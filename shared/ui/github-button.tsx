@@ -4,23 +4,29 @@ import styled from "styled-components";
 import { auth } from "../firebase/firebase";
 import { useNavigate } from "react-router-dom";
 
-const Button = styled.span`
+export const ButtonWrapper = styled.div`
+  margin-top: 50px;
+  gap: 20px;
+  width: 100%;
+`;
+
+export const Button = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  gap: 20px;
   background-color: white;
   font-weight: 500;
   padding: 10px 20px;
-  margin-top: 50px;
   border-radius: 50px;
   border: 0;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  justify-content: center;
   color: black;
   width: 100%;
   cursor: pointer;
 `;
 
-const Logo = styled.img`
+export const Logo = styled.img`
   height: 25px;
 `;
 

@@ -12,7 +12,8 @@ import {
   Switcher,
   StyledLink,
 } from "../../shared/ui/auth-components";
-import GithubButton from "../../shared/ui/github-button";
+import GithubButton, { ButtonWrapper } from "../../shared/ui/github-button";
+import GoogleButton from "../../shared/ui/gmail-button";
 
 export default function CreateAccount() {
   const navigate = useNavigate();
@@ -102,7 +103,10 @@ export default function CreateAccount() {
         Already have an account?
         <StyledLink to="/login">Login &rarr;</StyledLink>
       </Switcher>
-      <GithubButton />
+      <ButtonWrapper>
+        <GoogleButton />
+        <GithubButton />
+      </ButtonWrapper>
     </Wrapper>
   );
 }
